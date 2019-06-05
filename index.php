@@ -9,7 +9,7 @@
 </head>
 <body>
   <div id="app"></div>
-  <script src="dist/index.js"></script>
+  <script src="<?php echo get_template_directory_uri() ?>/dist/build.js"></script>
   <?php wp_footer() ?>
 </body>
 </html>

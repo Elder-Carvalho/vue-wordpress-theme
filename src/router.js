@@ -1,4 +1,8 @@
+import Vue from 'vue'
 import Router from 'vue-router'
+import Home from './pages/Home.vue'
+
+Vue.use(Router)
 
 export default new Router({
   mode: 'history',
@@ -6,7 +10,12 @@ export default new Router({
     {  
       path: '/',
       name: 'home',
-      component: 'home'
+      component: Home
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('./pages/About.vue')
     }
   ]
 })
